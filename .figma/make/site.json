@@ -1,0 +1,10 @@
+{
+  "description": "Showcase your freelance graphic design projects and services with a vibrant, user-friendly website featuring easy navigation and engaging content.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
