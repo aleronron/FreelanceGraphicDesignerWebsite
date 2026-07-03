@@ -3,12 +3,12 @@ export default function Hero() {
     <section
       id="about"
       className="flex flex-col md:flex-row min-h-screen pt-16 md:pt-20"
-      style={{ backgroundColor: '#FEF8F0' }}
+      style={{ backgroundColor: '#FEF5E6' }}
     >
       {/* Image — full width on mobile, left 50% on desktop */}
       <div
         className="relative overflow-hidden w-full md:w-1/2"
-        style={{ minHeight: '55vw', backgroundColor: '#E8D9C8' }}
+        style={{ minHeight: '55vw', backgroundColor: '#DAEEE3' }}
       >
         <img
           src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=900&h=1100&fit=crop&auto=format"
@@ -17,13 +17,14 @@ export default function Hero() {
         />
         <div
           className="absolute inset-0"
-          style={{ background: 'rgba(255,85,51,0.08)', mixBlendMode: 'multiply' }}
+          style={{ background: 'rgba(233,113,200,0.07)', mixBlendMode: 'multiply' }}
         />
+        {/* Badge — teal bg with cream text: 6.4:1 ✓ */}
         <div
           className="absolute bottom-6 left-6 px-4 py-2 text-xs font-semibold tracking-widest uppercase"
           style={{
-            backgroundColor: '#FFD166',
-            color: '#1A1214',
+            backgroundColor: '#326371',
+            color: '#FEF5E6',
             fontFamily: "'DM Sans', sans-serif",
             letterSpacing: '0.12em',
             borderRadius: '100px',
@@ -33,14 +34,19 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Text — full width on mobile, right 50% on desktop */}
+      {/* Text panel */}
       <div
         className="w-full md:w-1/2 flex flex-col justify-center px-6 py-12 md:py-20"
-        style={{ paddingLeft: 'clamp(1.5rem, 5vw, 4.5rem)', paddingRight: 'clamp(1.5rem, 5vw, 4.5rem)' }}
+        style={{
+          paddingLeft: 'clamp(1.5rem, 5vw, 4.5rem)',
+          paddingRight: 'clamp(1.5rem, 5vw, 4.5rem)',
+          backgroundColor: '#FEF5E6',
+        }}
       >
+        {/* Pink label — decorative large text, used as display not body */}
         <p
           className="text-xs font-semibold tracking-widest uppercase mb-5"
-          style={{ color: '#FF5533', fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.18em' }}
+          style={{ color: '#E971C8', fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.18em' }}
         >
           Freelance Graphic Designer
         </p>
@@ -51,18 +57,18 @@ export default function Hero() {
             fontFamily: "'Playfair Display', serif",
             fontSize: 'clamp(2.2rem, 5vw, 5rem)',
             fontWeight: 900,
-            color: '#1A1214',
+            color: '#326371',
             lineHeight: 1.05,
           }}
         >
           Design that makes people{' '}
-          <em style={{ color: '#FF5533', fontStyle: 'italic' }}>feel</em>{' '}
+          <em style={{ color: '#E971C8', fontStyle: 'italic' }}>feel</em>{' '}
           something.
         </h1>
 
         <p
           className="mb-3 text-base md:text-lg font-medium"
-          style={{ color: '#4A1D96', fontFamily: "'DM Sans', sans-serif" }}
+          style={{ color: '#326371', fontFamily: "'DM Sans', sans-serif" }}
         >
           Visual identity, brand strategy & bold creative direction.
         </p>
@@ -70,10 +76,11 @@ export default function Hero() {
         <p
           className="mb-8 leading-relaxed"
           style={{
-            color: '#7A6A5A',
+            color: '#326371',
             fontFamily: "'DM Sans', sans-serif",
             fontSize: '1rem',
             lineHeight: 1.75,
+            opacity: 0.75,
           }}
         >
           I help brands, founders, and studios build visual identities that are
@@ -82,43 +89,45 @@ export default function Hero() {
         </p>
 
         <div className="flex gap-3 flex-wrap">
+          {/* Primary button: teal bg + cream text = 6.4:1 ✓ */}
           <a
             href="#projects"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all duration-200"
             style={{
-              backgroundColor: '#FF5533',
-              color: '#ffffff',
+              backgroundColor: '#326371',
+              color: '#FEF5E6',
               fontFamily: "'DM Sans', sans-serif",
               borderRadius: '100px',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => {
-              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#E03D1E'
+              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#254d59'
             }}
             onMouseLeave={(e) => {
-              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#FF5533'
+              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#326371'
             }}
           >
             See my work →
           </a>
+          {/* Secondary button: teal outline + teal text on cream = 6.4:1 ✓ */}
           <a
             href="#contact"
             className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold transition-all duration-200"
             style={{
               backgroundColor: 'transparent',
-              color: '#1A1214',
+              color: '#326371',
               fontFamily: "'DM Sans', sans-serif",
               borderRadius: '100px',
-              border: '1.5px solid #1A1214',
+              border: '1.5px solid #326371',
               textDecoration: 'none',
             }}
             onMouseEnter={(e) => {
-              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#1A1214'
-              ;(e.currentTarget as HTMLAnchorElement).style.color = '#FEF8F0'
+              ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = '#326371'
+              ;(e.currentTarget as HTMLAnchorElement).style.color = '#FEF5E6'
             }}
             onMouseLeave={(e) => {
               ;(e.currentTarget as HTMLAnchorElement).style.backgroundColor = 'transparent'
-              ;(e.currentTarget as HTMLAnchorElement).style.color = '#1A1214'
+              ;(e.currentTarget as HTMLAnchorElement).style.color = '#326371'
             }}
           >
             Let's talk

@@ -3,11 +3,12 @@ export default function Bio() {
     <section
       id="projects"
       className="flex flex-col items-center justify-center text-center px-6 py-20 md:py-32"
-      style={{ backgroundColor: '#1A1214' }}
+      style={{ backgroundColor: '#DAEEE3' }}
     >
+      {/* Teal on mint: 5.5:1 ✓ AA */}
       <p
         className="text-xs font-semibold tracking-widest uppercase mb-8"
-        style={{ color: '#FF5533', fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.2em' }}
+        style={{ color: '#326371', fontFamily: "'DM Sans', sans-serif", letterSpacing: '0.2em' }}
       >
         A little about me
       </p>
@@ -18,23 +19,26 @@ export default function Bio() {
           fontFamily: "'Playfair Display', serif",
           fontSize: 'clamp(1.75rem, 4vw, 3.5rem)',
           fontWeight: 700,
-          color: '#FEF8F0',
+          color: '#326371',
           maxWidth: '22ch',
           lineHeight: 1.2,
         }}
       >
         I'm Maya — a designer obsessed with{' '}
-        <em style={{ color: '#FFD166', fontStyle: 'italic' }}>color, type,</em>{' '}
+        <em style={{ fontStyle: 'italic', borderBottom: '3px solid #E971C8' }}>
+          color, type,
+        </em>{' '}
         and the stories brands tell without words.
       </p>
 
       <p
         className="mt-8 text-sm md:text-base leading-relaxed"
         style={{
-          color: '#A89880',
+          color: '#326371',
           fontFamily: "'DM Sans', sans-serif",
           maxWidth: '52ch',
           lineHeight: 1.8,
+          opacity: 0.8,
         }}
       >
         Based in Barcelona. 7 years designing for startups, cultural institutions, and
@@ -42,7 +46,6 @@ export default function Bio() {
         should feel effortless — even when the process wasn't.
       </p>
 
-      {/* Stats row — wraps on very small screens */}
       <div className="flex flex-wrap justify-center gap-8 mt-12">
         {[
           { num: '80+', label: 'Projects delivered' },
@@ -55,14 +58,14 @@ export default function Bio() {
                 fontFamily: "'Playfair Display', serif",
                 fontSize: '2rem',
                 fontWeight: 900,
-                color: '#FFD166',
+                color: '#326371',
               }}
             >
               {stat.num}
             </span>
             <span
               className="text-xs mt-1"
-              style={{ color: '#7A6A5A', fontFamily: "'DM Sans', sans-serif" }}
+              style={{ color: '#326371', fontFamily: "'DM Sans', sans-serif", opacity: 0.65 }}
             >
               {stat.label}
             </span>

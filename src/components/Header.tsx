@@ -15,16 +15,15 @@ export default function Header() {
     <header
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        backgroundColor: 'rgba(254,248,240,0.92)',
+        backgroundColor: 'rgba(254,245,230,0.94)',
         backdropFilter: 'blur(12px)',
-        borderBottom: '1px solid #E8D9C8',
+        borderBottom: '1px solid #d9c9b8',
       }}
     >
       <div className="flex items-center justify-between px-6 py-4 md:px-10 md:py-5">
-        {/* Logo / name — always visible */}
         <div
           className="text-sm font-semibold tracking-widest uppercase"
-          style={{ fontFamily: "'DM Sans', sans-serif", color: '#1A1214', letterSpacing: '0.15em' }}
+          style={{ fontFamily: "'DM Sans', sans-serif", color: '#326371', letterSpacing: '0.15em' }}
         >
           Maya Reyes
         </div>
@@ -39,16 +38,16 @@ export default function Header() {
               className="text-sm font-medium transition-colors duration-200"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                color: active === link.label ? '#FF5533' : '#1A1214',
+                color: active === link.label ? '#E971C8' : '#326371',
                 textDecoration: 'none',
               }}
               onMouseEnter={(e) => {
                 if (active !== link.label)
-                  (e.currentTarget as HTMLAnchorElement).style.color = '#FF5533'
+                  (e.currentTarget as HTMLAnchorElement).style.color = '#E971C8'
               }}
               onMouseLeave={(e) => {
                 if (active !== link.label)
-                  (e.currentTarget as HTMLAnchorElement).style.color = '#1A1214'
+                  (e.currentTarget as HTMLAnchorElement).style.color = '#326371'
               }}
             >
               {link.label}
@@ -62,35 +61,32 @@ export default function Header() {
           onClick={() => setMenuOpen((o) => !o)}
           aria-label="Toggle menu"
         >
-          <span
-            className="block h-0.5 w-6 transition-all duration-200"
-            style={{
-              backgroundColor: '#1A1214',
-              transform: menuOpen ? 'translateY(8px) rotate(45deg)' : 'none',
-            }}
-          />
-          <span
-            className="block h-0.5 w-6 transition-all duration-200"
-            style={{
-              backgroundColor: '#1A1214',
-              opacity: menuOpen ? 0 : 1,
-            }}
-          />
-          <span
-            className="block h-0.5 w-6 transition-all duration-200"
-            style={{
-              backgroundColor: '#1A1214',
-              transform: menuOpen ? 'translateY(-8px) rotate(-45deg)' : 'none',
-            }}
-          />
+          {[
+            menuOpen ? 'translateY(8px) rotate(45deg)' : 'none',
+            null,
+            menuOpen ? 'translateY(-8px) rotate(-45deg)' : 'none',
+          ].map((transform, i) =>
+            transform === null ? (
+              <span
+                key={i}
+                className="block h-0.5 w-6 transition-all duration-200"
+                style={{ backgroundColor: '#326371', opacity: menuOpen ? 0 : 1 }}
+              />
+            ) : (
+              <span
+                key={i}
+                className="block h-0.5 w-6 transition-all duration-200"
+                style={{ backgroundColor: '#326371', transform }}
+              />
+            )
+          )}
         </button>
       </div>
 
-      {/* Mobile dropdown */}
       {menuOpen && (
         <nav
           className="md:hidden flex flex-col px-6 pb-6 gap-5"
-          style={{ borderTop: '1px solid #E8D9C8' }}
+          style={{ borderTop: '1px solid #d9c9b8' }}
         >
           {links.map((link) => (
             <a
@@ -100,7 +96,7 @@ export default function Header() {
               className="text-base font-medium py-1"
               style={{
                 fontFamily: "'DM Sans', sans-serif",
-                color: active === link.label ? '#FF5533' : '#1A1214',
+                color: active === link.label ? '#E971C8' : '#326371',
                 textDecoration: 'none',
               }}
             >
