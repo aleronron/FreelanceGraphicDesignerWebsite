@@ -25,7 +25,7 @@ jobs:
         run: |
           git fetch origin figma-sync
           git merge -X theirs origin/figma-sync --allow-unrelated-histories -m "Sync from Figma" || true
-          git checkout main -- .github
+          git checkout origin/main -- .github
           git add .github
           git commit -m "Restore protected .github folder" --allow-empty
           git push origin main
