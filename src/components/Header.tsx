@@ -25,7 +25,7 @@ export default function Header() {
           className="text-sm font-semibold tracking-widest uppercase"
           style={{ fontFamily: "'DM Sans', sans-serif", color: '#326371', letterSpacing: '0.15em' }}
         >
-          Maya Reyes
+          ALESSIA RONCA
         </div>
 
         {/* Desktop nav */}

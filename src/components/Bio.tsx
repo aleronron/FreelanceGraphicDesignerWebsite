@@ -24,7 +24,7 @@ export default function Bio() {
           lineHeight: 1.2,
         }}
       >
-        I'm Maya — a designer obsessed with{' '}
+        I'm Alessia — a designer obsessed with{' '}
         <em style={{ fontStyle: 'italic', borderBottom: '3px solid #E971C8' }}>
           color, type,
         </em>{' '}
@@ -41,9 +41,9 @@ export default function Bio() {
           opacity: 0.8,
         }}
       >
-        Based in Barcelona. 7 years designing for startups, cultural institutions, and
-        independent businesses across Europe and Latin America. I believe good design
-        should feel effortless — even when the process wasn't.
+        Based in Bremen. I design for startups, cultural institutions, and independent
+        businesses across Europe. I believe good design should feel effortless — even
+        when the process wasn't.
       </p>
 
       <div className="flex flex-wrap justify-center gap-8 mt-12">
