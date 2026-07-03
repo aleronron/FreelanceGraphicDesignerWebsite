@@ -31,6 +31,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          FIGMA_PUBLIC_URL: /FreelanceGraphicDesignerWebsite
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
