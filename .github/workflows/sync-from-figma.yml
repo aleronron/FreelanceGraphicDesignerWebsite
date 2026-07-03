@@ -1,0 +1,31 @@
+name: Sync from Figma
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Merge figma-sync into main, keep protected paths
+        run: |
+          git fetch origin figma-sync
+          git merge -X theirs origin/figma-sync --allow-unrelated-histories -m "Sync from Figma" || true
+          git checkout main -- .github
+          git add .github
+          git commit -m "Restore protected .github folder" --allow-empty
+          git push origin main
